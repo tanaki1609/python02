@@ -1,13 +1,26 @@
-# Encapsulation
+"""
+1. Инкапсуляция — это способность объектов скрывать часть
+своего состояния и поведения от других объектов, предоставляя внешнему миру только определённый интерфейс
+взаимодействия с собой.
+Например, вы можете инкапсулировать что-то внутри класса, сделав его приватным ( private ) и скрыв доступ к этому
+полю или методу для объектов других классов. Чуть более
+свободный, защищённый ( protected ) режим видимости
+сделает это поле или метод доступным в подклассах.
+"""
+
+
 class BankAccount:
-    name = 'Kanat'          # public
-    _balance = 0            # protected
-    __passport = 'AN5243345'# private
+    name = 'Kanat'  # public
+    _balance = 0  # protected
+    __passport = 'AN5243345'  # private
+
     def __init__(self, name):
         self.name = name
 
     def get_passport(self):
         return self.__passport
+
+
 b = BankAccount("Azamat")
 print(b.name)
 print(b.get_passport())
