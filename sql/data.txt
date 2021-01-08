@@ -1,0 +1,25 @@
+### https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04-ru
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+brew services start postgresql  # macos
+
+- Postgres data types
+    * boolean [y,yes, n, no, 0,1, true, false] => 0,1
+    * int, float => 23, 23.5
+    * char, varchar (255), text => 'd','dasdfasf'
+    * timestamp => 16.01.2021
+    ....
+- Creating table
+    * create table links(id serial primary key, name
+    varchar(255) null, url varchar(255) not null );
+
+- Add data to table
+    * insert into links(id, name, url) values(default, 'car', 'car.jpg');
+
+- Get data from table
+    * select id, name, url from links;
+
+table - author: id, name,
+table - book: id, name, price, genre, author_id(Foreign key)
+
