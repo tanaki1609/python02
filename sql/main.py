@@ -1,6 +1,4 @@
 import psycopg2
-
-
 class DataBaseClub:
     def __init__(self):
         self.connect = psycopg2.connect(dbname='postgres',
